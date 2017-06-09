@@ -23,7 +23,7 @@ class MaxIntSet
   private
 
   def is_valid?(num)
-    raise "Out of bounds" if num >= @max
+    raise "Out of bounds" if num >= @max || num < 0
   end
 
   def validate!(num)
