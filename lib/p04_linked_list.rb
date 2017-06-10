@@ -52,6 +52,12 @@ class LinkedList
     end
   end
 
+  def get_2(key)
+    self.each do |link|
+      return link if key == link.key
+    end
+  end
+
   def include?(key)
     self.each do |link|
       return true if key == link.key
@@ -67,6 +73,7 @@ class LinkedList
       previous.next = link
       link.prev = previous
       link.next = @tail
+      return link
     else
       update(key, val)
     end
